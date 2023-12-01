@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DataPengujianController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,10 +23,7 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified'
 ])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
-    Route::get('/add-data', function () {
-        return view('add-data');
-    })->name('add-data');
+    Route::get('/dashboard', function () { return view('dashboard'); })->name('dashboard');
+    Route::get('/add-data', function () { return view('add-data'); })->name('add-data');
+    Route::resource('data', DataPengujianController::class);
 });

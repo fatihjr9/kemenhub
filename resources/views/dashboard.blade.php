@@ -29,9 +29,6 @@
                             Alamat
                         </th>
                         <th scope="col" class="px-6 py-3">
-                            Masa Berlaku Uji
-                        </th>
-                        <th scope="col" class="px-6 py-3">
                             Identitas Kendaraan
                         </th>
                         <th scope="col" class="px-6 py-3">
@@ -55,9 +52,6 @@
                         </td>
                         <td class="px-6 py-4">
                             Semarang
-                        </td>
-                        <td class="px-6 py-4">
-                            32 Desember 2080
                         </td>
                         <td class="px-6 py-4">
                             <button data-modal-target="default-modal-1" data-modal-toggle="default-modal-1" class="block p-2 text-xs text-black font-medium rounded-md bg-gray-200" type="button">

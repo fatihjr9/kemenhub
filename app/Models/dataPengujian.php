@@ -1,0 +1,71 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class dataPengujian extends Model
+{
+    use HasFactory;
+    protected $fillable = [
+        'nama_pemilik',
+        'alamat_pemilik',
+        'no_uji_kendaraan',
+        'no_sertifikat_registrasi',
+        'no_registrasi_kendaraan',
+        'no_rangka_kendaraan',
+        'no_motor_penggerak',
+        'foto_depan',
+        'foto_belakang',
+        'foto_kanan',
+        'foto_kiri',
+        'jenis_kendaraan',
+        'merk_kendaraan',
+        'tahun_pembuatan',
+        'isi_silinder',
+        'bahan_bakar',
+        'daya_motor',
+        'ukuran_ban',
+        'konfigurasi_sumbu',
+        'berat_kosong',
+        'panjang_kendaraan',
+        'lebar_kendaraan',
+        'tinggi_kendaraan',
+        'julur_depan',
+        'julur_belakang',
+        'sumbu_satu_dua',
+        'sumbu_dua_tiga',
+        'sumbu_tiga_empat',
+        'pjg_lbr_tinggi',
+        'jbb',
+        'jbi',
+        'daya_angkut',
+        'kelas_rendah',
+        'rem_utama',
+        'rem_utama_satu',
+        'rem_utama_dua',
+        'rem_utama_tiga',
+        'rem_utama_empat',
+        'lampu_utama_kanan',
+        'lampu_utama_kiri',
+        'lampu_simpang_utama_kanan',
+        'lampu_simpang_utama_kiri',
+        'emisi_co',
+        'emisi_hc',
+        'ketebalan_asap',
+        'keterangan_uji_berkala',
+        'masa_berlaku',
+        'nama_penguji',
+        'nrp_penguji',
+        'nama_kepala_dinas',
+        'pangkat_kepala_dinas',
+        'nip_kepala_dinas',
+        'uptd_penguji',
+        'nama_direktur',
+        'pangkat_direktur',
+        'nip_direktur',
+        'wilayah_uji',
+        'wilayah_asal',
+    ];
+}
