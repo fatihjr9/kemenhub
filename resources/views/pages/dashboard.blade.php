@@ -392,7 +392,6 @@
                     @endforelse
                 </tbody>
             </table>
-            {{ $dataUji->links() }}
         </div>
     </div>
 </x-app-layout>

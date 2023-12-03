@@ -28,7 +28,7 @@
         }
     </style>
     <div class="bg-template"></div>
-    <div class="absolute inset-0" style="transform: translateY(14rem)!important;">
+    <div class="absolute inset-0" style="transform: translateY(10rem)!important;">
         <div class="bg-light px-4 py-8 mx-auto">
             <div class="p-4" style="background-color:#f4f5fa;">
                 <div style="width: 24rem; margin-right:auto;">
@@ -180,35 +180,117 @@
                                 </div>
                             </div>
                             {{-- spacer --}}
+                            <div style="padding:1rem; display: flex; align-items:flex-start; justify-content:space-between; gap:4rem; border-bottom:1.5px solid #f8f8f8;">
+                                <h5>Jarak Sumbu</h5>
+                            </div>
+                            <div style="padding:1rem; display: grid; grid-template-columns:1fr; align-items:flex-start; justify-content:space-between; gap:4rem; border-bottom:1.5px solid #f8f8f8;">
+                                <div style="display: grid; grid-template-columns:1fr 1fr;">
+                                    <h5> Sumbu <br>
+                                        I - II</h5>
+                                    <p>: {{ $dataUji->sumbu_satu_dua }}</p>
+                                </div>
+                            </div>
+                            <div style="padding:1rem; display: grid; grid-template-columns:1fr; align-items:flex-start; justify-content:space-between; gap:4rem; border-bottom:1.5px solid #f8f8f8;">
+                                <div style="display: grid; grid-template-columns:1fr 1fr;">
+                                    <h5> Sumbu <br>
+                                        II - III</h5>
+                                    <p>: {{ $dataUji->sumbu_dua_tiga }}</p>
+                                </div>
+                            </div>
+                            <div style="padding:1rem; display: grid; grid-template-columns:1fr; align-items:flex-start; justify-content:space-between; gap:4rem; border-bottom:1.5px solid #f8f8f8;">
+                                <div style="display: grid; grid-template-columns:1fr 1fr;">
+                                    <h5> Sumbu <br>
+                                        III - IV</h5>
+                                    <p>: {{ $dataUji->sumbu_tiga_empat }}</p>
+                                </div>
+                            </div>
                             {{-- spacer --}}
                             <div style="padding:1rem; display: flex; align-items:flex-start; justify-content:space-between; gap:4rem; border-bottom:1.5px solid #f8f8f8;">
-                                <h5>Dimensi utama <br> kendaraan <br> bermotor</h5>
+                                <h5>Dimensi bak <br> muatan / tangki</h5>
                             </div>
-                            <div style="padding:1rem; display: grid; grid-template-columns:1fr 1fr; align-items:flex-start; justify-content:space-between; gap:4rem; border-bottom:1.5px solid #f8f8f8;">
+                            <div style="padding:1rem; display: grid; grid-template-columns:1fr; align-items:flex-start; justify-content:space-between; gap:4rem; border-bottom:1.5px solid #f8f8f8;">
                                 <div style="display: grid; grid-template-columns:1fr 1fr;">
-                                    <h5>Panjang</h5>
-                                    <p>: {{ $dataUji->panjang_kendaraan }}</p>
-                                </div>
-                                <div style="display: grid; grid-template-columns:1fr 1fr;">
-                                    <h5>Julur Depan</h5>
-                                    <p>: {{ $dataUji->julur_depan }}</p>
+                                    <h5> Panjang <br> x Lebar x <br> Tinggi</h5>
+                                    <p>: {{ $dataUji->pjg_lbr_tinggi }}</p>
                                 </div>
                             </div>
-                            <div style="padding:1rem; display: grid; grid-template-columns:1fr 1fr; align-items:flex-start; justify-content:space-between; gap:4rem; border-bottom:1.5px solid #f8f8f8;">
+                            <div style="padding:1rem; display: grid; grid-template-columns:1fr; align-items:flex-start; justify-content:space-between; gap:4rem; border-bottom:1.5px solid #f8f8f8;">
                                 <div style="display: grid; grid-template-columns:1fr 1fr;">
-                                    <h5>Lebar</h5>
-                                    <p>: {{ $dataUji->lebar_kendaraan }}</p>
-                                </div>
-                                <div style="display: grid; grid-template-columns:1fr 1fr;">
-                                    <h5>Julur Belakang</h5>
-                                    <p>: {{ $dataUji->julur_belakang }}</p>
+                                    <h5>JBB / JBKB</h5>
+                                    <p>: {{ $dataUji->jbb }}</p>
                                 </div>
                             </div>
-                            <div style="padding:1rem; display: grid; grid-template-columns:1fr 1fr; align-items:flex-start; justify-content:space-between; gap:4rem; border-bottom:1.5px solid #f8f8f8;">
+                            <div style="padding:1rem; display: grid; grid-template-columns:1fr; align-items:flex-start; justify-content:space-between; gap:4rem; border-bottom:1.5px solid #f8f8f8;">
                                 <div style="display: grid; grid-template-columns:1fr 1fr;">
-                                    <h5>Tinggi</h5>
-                                    <p>: {{ $dataUji->tinggi_kendaraan }}</p>
+                                    <h5>JBI / JBKI</h5>
+                                    <p>: {{ $dataUji->jbi }}</p>
                                 </div>
+                            </div>
+                            <div style="padding:1rem; display: grid; grid-template-columns:1fr; align-items:flex-start; justify-content:space-between; gap:4rem; border-bottom:1.5px solid #f8f8f8;">
+                                <div style="display: grid; grid-template-columns:1fr 1fr;">
+                                    <h5>Daya angkut <br> (orang / kg)</h5>
+                                    <p>: {{ $dataUji->daya_angkut }}</p>
+                                </div>
+                            </div>
+                            <div style="padding:1rem; display: grid; grid-template-columns:1fr; align-items:flex-start; justify-content:space-between; gap:4rem; border-bottom:1.5px solid #f8f8f8;">
+                                <div style="display: grid; grid-template-columns:1fr 1fr;">
+                                    <h5>Kelas jalan <br> terendah yang <br> boleh dilalui</h5>
+                                    <p>: {{ $dataUji->kelas_rendah }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{-- content-5 --}}
+                    <div style="margin-bottom: 1rem;">
+                        <h5 style="margin-bottom: 1rem; font-weight:500;">KETERANGAN HASIL UJI</h5>
+                        <div style="display:grid; grid-template-rows:1fr 1fr; align-items:flex-start; background-color:white; height:fit-content;">
+                            <div style="padding:1rem; display: flex; align-items:flex-start; justify-content:space-between; gap:4rem; border-bottom:1.5px solid #f8f8f8;">
+                                <h5>Rem Utama</h5>
+                                <p>: {{ $dataUji->rem_utama }}</p>
+                            </div>
+                            <div style="padding:1rem; display: flex; align-items:flex-start; justify-content:space-between; gap:4rem; border-bottom:1.5px solid #f8f8f8;">
+                                <h5>Rem Utama <br> Sumbu I</h5>
+                                <p>: {{ $dataUji->rem_utama_satu }}</p>
+                            </div>
+                            <div style="padding:1rem; display: flex; align-items:flex-start; justify-content:space-between; gap:4rem; border-bottom:1.5px solid #f8f8f8;">
+                                <h5>Rem Utama <br> Sumbu II</h5>
+                                <p>: {{ $dataUji->rem_utama_dua }}</p>
+                            </div>
+                            <div style="padding:1rem; display: flex; align-items:flex-start; justify-content:space-between; gap:4rem; border-bottom:1.5px solid #f8f8f8;">
+                                <h5>Rem Utama <br> Sumbu III</h5>
+                                <p>: {{ $dataUji->rem_utama_tiga }}</p>
+                            </div>
+                            <div style="padding:1rem; display: flex; align-items:flex-start; justify-content:space-between; gap:4rem; border-bottom:1.5px solid #f8f8f8;">
+                                <h5>Rem Utama <br> Sumbu IV</h5>
+                                <p>: {{ $dataUji->rem_utama_empat }}</p>
+                            </div>
+                            <div style="padding:1rem; display: flex; align-items:flex-start; justify-content:space-between; gap:4rem; border-bottom:1.5px solid #f8f8f8;">
+                                <h5>Lampu Utama <br> Kanan</h5>
+                                <p>: {{ $dataUji->lampu_utama_kanan }}</p>
+                            </div>
+                            <div style="padding:1rem; display: flex; align-items:flex-start; justify-content:space-between; gap:4rem; border-bottom:1.5px solid #f8f8f8;">
+                                <h5>Lampu Utama <br> Kiri</h5>
+                                <p>: {{ $dataUji->lampu_utama_kiri }}</p>
+                            </div>
+                            <div style="padding:1rem; display: flex; align-items:flex-start; justify-content:space-between; gap:4rem; border-bottom:1.5px solid #f8f8f8;">
+                                <h5>Lampu Utama <br> Penyimpangan <br> Kanan</h5>
+                                <p>: {{ $dataUji->lampu_simpang_utama_kanan }}</p>
+                            </div>
+                            <div style="padding:1rem; display: flex; align-items:flex-start; justify-content:space-between; gap:4rem; border-bottom:1.5px solid #f8f8f8;">
+                                <h5>Lampu Utama <br> Penyimpangan <br> Kiri</h5>
+                                <p>: {{ $dataUji->lampu_simpang_utama_kiri }}</p>
+                            </div>
+                            <div style="padding:1rem; display: flex; align-items:flex-start; justify-content:space-between; gap:4rem; border-bottom:1.5px solid #f8f8f8;">
+                                <h5>Emisi CO</h5>
+                                <p>: {{ $dataUji->emisi_co }}</p>
+                            </div>
+                            <div style="padding:1rem; display: flex; align-items:flex-start; justify-content:space-between; gap:4rem; border-bottom:1.5px solid #f8f8f8;">
+                                <h5>Emisi HC</h5>
+                                <p>: {{ $dataUji->emisi_hc }}</p>
+                            </div>
+                            <div style="padding:1rem; display: flex; align-items:flex-start; justify-content:space-between; gap:4rem; border-bottom:1.5px solid #f8f8f8;">
+                                <h5>Ketebalan Asap</h5>
+                                <p>: {{ $dataUji->ketebalan_asap }}</p>
                             </div>
                         </div>
                     </div>
