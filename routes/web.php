@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\DataPengujianController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,7 +22,9 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified'
 ])->group(function () {
-    Route::get('/dashboard', function () { return view('dashboard'); })->name('dashboard');
-    Route::get('/add-data', function () { return view('add-data'); })->name('add-data');
-    Route::resource('data', DataPengujianController::class);
+    Route::get('/dashboard', [\App\Http\Controllers\DataPengujianController::class, 'index'])->name('dashboard');
+    Route::get('/add-data', [\App\Http\Controllers\DataPengujianController::class, 'create'])->name('add-data');
+    Route::get('/template/{name}', [\App\Http\Controllers\DataPengujianController::class, 'show'])->name('template');
+    Route::post('/add-data', [\App\Http\Controllers\DataPengujianController::class, 'store'])->name('add-data');
+    Route::get('/download/{name}', [\App\Http\Controllers\DataPengujianController::class, 'downloadPDF'])->name('download');
 });
