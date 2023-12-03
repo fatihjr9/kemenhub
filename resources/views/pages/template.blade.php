@@ -31,7 +31,7 @@
     <div class="absolute inset-0" style="transform: translateY(14rem)!important;">
         <div class="bg-light px-4 py-8 mx-auto">
             <div class="p-4" style="background-color:#f4f5fa;">
-                <div style="width: 20rem; margin-right:auto;">
+                <div style="width: 24rem; margin-right:auto;">
                     <div class="text-center space-y-2 mb-10">
                         <h5 class="text-xl">UJI BERKALA KENDARAAN <br> BERMOTOR</h5>
                         @if($dataUji->masa_berlaku)
@@ -149,8 +149,66 @@
                                 <h5>Berat Kosong <br> Kendaraan</h5>
                                 <p>: {{ $dataUji->no_motor_penggerak }}</p>
                             </div>
+                            {{-- spacer --}}
                             <div style="padding:1rem; display: flex; align-items:flex-start; justify-content:space-between; gap:4rem; border-bottom:1.5px solid #f8f8f8;">
                                 <h5>Dimensi utama <br> kendaraan <br> bermotor</h5>
+                            </div>
+                            <div style="padding:1rem; display: grid; grid-template-columns:1fr 1fr; align-items:flex-start; justify-content:space-between; gap:4rem; border-bottom:1.5px solid #f8f8f8;">
+                                <div style="display: grid; grid-template-columns:1fr 1fr;">
+                                    <h5>Panjang</h5>
+                                    <p>: {{ $dataUji->panjang_kendaraan }}</p>
+                                </div>
+                                <div style="display: grid; grid-template-columns:1fr 1fr;">
+                                    <h5>Julur Depan</h5>
+                                    <p>: {{ $dataUji->julur_depan }}</p>
+                                </div>
+                            </div>
+                            <div style="padding:1rem; display: grid; grid-template-columns:1fr 1fr; align-items:flex-start; justify-content:space-between; gap:4rem; border-bottom:1.5px solid #f8f8f8;">
+                                <div style="display: grid; grid-template-columns:1fr 1fr;">
+                                    <h5>Lebar</h5>
+                                    <p>: {{ $dataUji->lebar_kendaraan }}</p>
+                                </div>
+                                <div style="display: grid; grid-template-columns:1fr 1fr;">
+                                    <h5>Julur Belakang</h5>
+                                    <p>: {{ $dataUji->julur_belakang }}</p>
+                                </div>
+                            </div>
+                            <div style="padding:1rem; display: grid; grid-template-columns:1fr 1fr; align-items:flex-start; justify-content:space-between; gap:4rem; border-bottom:1.5px solid #f8f8f8;">
+                                <div style="display: grid; grid-template-columns:1fr 1fr;">
+                                    <h5>Tinggi</h5>
+                                    <p>: {{ $dataUji->tinggi_kendaraan }}</p>
+                                </div>
+                            </div>
+                            {{-- spacer --}}
+                            {{-- spacer --}}
+                            <div style="padding:1rem; display: flex; align-items:flex-start; justify-content:space-between; gap:4rem; border-bottom:1.5px solid #f8f8f8;">
+                                <h5>Dimensi utama <br> kendaraan <br> bermotor</h5>
+                            </div>
+                            <div style="padding:1rem; display: grid; grid-template-columns:1fr 1fr; align-items:flex-start; justify-content:space-between; gap:4rem; border-bottom:1.5px solid #f8f8f8;">
+                                <div style="display: grid; grid-template-columns:1fr 1fr;">
+                                    <h5>Panjang</h5>
+                                    <p>: {{ $dataUji->panjang_kendaraan }}</p>
+                                </div>
+                                <div style="display: grid; grid-template-columns:1fr 1fr;">
+                                    <h5>Julur Depan</h5>
+                                    <p>: {{ $dataUji->julur_depan }}</p>
+                                </div>
+                            </div>
+                            <div style="padding:1rem; display: grid; grid-template-columns:1fr 1fr; align-items:flex-start; justify-content:space-between; gap:4rem; border-bottom:1.5px solid #f8f8f8;">
+                                <div style="display: grid; grid-template-columns:1fr 1fr;">
+                                    <h5>Lebar</h5>
+                                    <p>: {{ $dataUji->lebar_kendaraan }}</p>
+                                </div>
+                                <div style="display: grid; grid-template-columns:1fr 1fr;">
+                                    <h5>Julur Belakang</h5>
+                                    <p>: {{ $dataUji->julur_belakang }}</p>
+                                </div>
+                            </div>
+                            <div style="padding:1rem; display: grid; grid-template-columns:1fr 1fr; align-items:flex-start; justify-content:space-between; gap:4rem; border-bottom:1.5px solid #f8f8f8;">
+                                <div style="display: grid; grid-template-columns:1fr 1fr;">
+                                    <h5>Tinggi</h5>
+                                    <p>: {{ $dataUji->tinggi_kendaraan }}</p>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -26,5 +26,6 @@ Route::middleware([
     Route::get('/add-data', [\App\Http\Controllers\DataPengujianController::class, 'create'])->name('add-data');
     Route::get('/template/{name}', [\App\Http\Controllers\DataPengujianController::class, 'show'])->name('template');
     Route::post('/add-data', [\App\Http\Controllers\DataPengujianController::class, 'store'])->name('add-data');
+    Route::get('/delete/{id}', [\App\Http\Controllers\DataPengujianController::class, 'deleteData'])->name('delete');
     Route::get('/download/{name}', [\App\Http\Controllers\DataPengujianController::class, 'downloadPDF'])->name('download');
 });

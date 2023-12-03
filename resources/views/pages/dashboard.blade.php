@@ -94,19 +94,19 @@
                                             <div class="p-4 grid grid-cols-1 md:grid-cols-2 gap-4">
                                                 <div class="flex flex-col">
                                                     <h5 class="text-md font-semibold text-black">Foto Depan</h5>
-                                                    <img src="{{ Storage::url('public/img/').$item->foto_depan }}" class="w-96">
+                                                    <img src="{{ asset('storage'.$item->foto_depan) }}" class="w-96">
                                                 </div>
                                                 <div class="flex flex-col">
                                                     <h5 class="text-md font-semibold text-black">Foto Belakang</h5>
-                                                    <img src="{{ Storage::url('public/img/').$item->foto_belakang }}" class="w-96">
+                                                    <img src="{{ asset('storage'.$item->foto_belakang) }}" class="w-96">
                                                 </div>
                                                 <div class="flex flex-col">
                                                     <h5 class="text-md font-semibold text-black">Foto Kiri</h5>
-                                                    <img src="{{ Storage::url('public/img/').$item->foto_kiri }}" class="w-96">
+                                                    <img src="{{ asset('storage'.$item->foto_kiri) }}" class="w-96">
                                                 </div>
                                                 <div class="flex flex-col">
                                                     <h5 class="text-md font-semibold text-black">Foto Kanan</h5>
-                                                    <img src="{{ Storage::url('public/img/').$item->foto_kanan }}" class="w-96">
+                                                    <img src="{{ asset('storage'.$item->foto_kanan) }}" class="w-96">
                                                 </div>
                                             </div>
                                             </div>
@@ -367,18 +367,18 @@
                                 </button>
                                 <div id="dropdown-{{ $item->id }}" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44">
                                     <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
-                                      <li>
-                                        <a href="/template/{{ $item->nama_pemilik }}" target="_blank" class="block px-4 py-2 hover:bg-gray-100">Lihat</a>
-                                      </li>
-                                      <li>
-                                        <a href="{{ route('download', ['name' => $item->nama_pemilik]) }}" target="_blank" class="block px-4 py-2 hover:bg-gray-100">Download</a>
-                                      </li>
-                                      <li>
-                                        <a href="/edit" class="block px-4 py-2 hover:bg-gray-100">Edit</a>
-                                      </li>
-                                      <li>
-                                        <a href="/delete" class="block px-4 py-2 hover:bg-gray-100">Hapus</a>
-                                      </li>
+                                        <li>
+                                          <a href="/template/{{ $item->nama_pemilik }}" target="_blank" class="block px-4 py-2 hover:bg-gray-100">Lihat</a>
+                                        </li>
+                                        <li>
+                                          <a href="{{ route('download', ['name' => $item->nama_pemilik]) }}" target="_blank" class="block px-4 py-2 hover:bg-gray-100">Download</a>
+                                        </li>
+                                        <li>
+                                          <a href="/edit" class="block px-4 py-2 hover:bg-gray-100">Edit</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ route('delete', ['id' => $item->id]) }}" class="block px-4 py-2 hover:bg-gray-100">Hapus</a>
+                                        </li>
                                     </ul>
                                 </div>
                             </td>

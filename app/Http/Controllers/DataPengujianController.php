@@ -29,10 +29,10 @@ class DataPengujianController extends Controller
             'no_registrasi_kendaraan' => 'required',
             'no_rangka_kendaraan' => 'required',
             'no_motor_penggerak' => 'required',
-            'foto_depan' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:1000',
-            'foto_belakang' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:1000',
-            'foto_kanan' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:1000',
-            'foto_kiri' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:1000',
+            'foto_depan' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:1024',
+            'foto_belakang' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:1024',
+            'foto_kanan' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:1024',
+            'foto_kiri' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:1024',
             'jenis_kendaraan' => 'required',
             'merk_kendaraan' => 'required',
             'tahun_pembuatan' => 'required',
@@ -82,10 +82,10 @@ class DataPengujianController extends Controller
             'wilayah_asal' => 'required'
         ]);
         //upload image
-        $foto_depan = $request->file('foto_depan')->storeAs('public/img', $request->file('foto_depan')->hashName());
-        $foto_belakang = $request->file('foto_belakang')->storeAs('public/img', $request->file('foto_belakang')->hashName());
-        $foto_kanan = $request->file('foto_kanan')->storeAs('public/img', $request->file('foto_kanan')->hashName());
-        $foto_kiri = $request->file('foto_kiri')->storeAs('public/img', $request->file('foto_kiri')->hashName());
+        $image = $request->file('foto_depan', 'foto_belakang', 'foto_kanan', 'foto_kiri');
+        $image_name = time() . '.' . $image->extension();
+        $image->storeAs('app/public/img', $image_name);
+
         // create post
         dataPengujian::create([
             'nama_pemilik' => $request->nama_pemilik,
@@ -95,10 +95,10 @@ class DataPengujianController extends Controller
             'no_registrasi_kendaraan' => $request->no_registrasi_kendaraan,
             'no_rangka_kendaraan' => $request->no_rangka_kendaraan,
             'no_motor_penggerak' => $request->no_motor_penggerak,
-            'foto_depan' => $foto_depan,
-            'foto_belakang' => $foto_belakang,
-            'foto_kanan' => $foto_kanan,
-            'foto_kiri' => $foto_kiri,
+            'foto_depan' => $image_name,
+            'foto_belakang' => $image_name,
+            'foto_kanan' => $image_name,
+            'foto_kiri' => $image_name,
             'jenis_kendaraan' => $request->jenis_kendaraan,
             'merk_kendaraan' => $request->merk_kendaraan,
             'tahun_pembuatan' => $request->tahun_pembuatan,
@@ -147,7 +147,7 @@ class DataPengujianController extends Controller
             'wilayah_uji' => $request->wilayah_uji,
             'wilayah_asal' => $request->wilayah_asal
         ]);
-        return redirect()->route('pages.dashboard')->with(['success' => 'Data Berhasil Disimpan!']);
+        return redirect()->route('dashboard')->with(['success' => 'Data Berhasil Disimpan!']);
     }
 
     public function show($name)
@@ -161,5 +161,11 @@ class DataPengujianController extends Controller
         $dataUji = dataPengujian::where('nama_pemilik', $name)->firstOrFail();
         $pdf = app('dompdf.wrapper')->loadView('pages.template', compact('dataUji'));
         return $pdf->download('data_uji_' . $name . '.pdf');
+    }
+
+    public function deleteData($id) {
+        $dataUji = dataPengujian::findOrFail($id);
+        $dataUji->delete();
+        return redirect()->route('dashboard')->with(['success' => 'Data Berhasil Dihapus!']);
     }
 }

@@ -61,19 +61,19 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-4">
                     <div>
                         <label for="no_uji" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Foto Depan</label>
-                        <input type="file" name="foto_depan" accept="image/*" required>
+                        <input type="file" name="foto_depan" required>
                     </div>
                     <div>
                         <label for="no_uji" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Foto Belakang</label>
-                        <input type="file" name="foto_belakang" accept="image/*" required>
+                        <input type="file" name="foto_belakang" required>
                     </div>
                     <div>
                         <label for="no_uji" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Foto Kiri</label>
-                        <input type="file" name="foto_kiri" accept="image/*" required>
+                        <input type="file" name="foto_kiri" required>
                     </div>
                     <div>
                         <label for="no_uji" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Foto Kanan</label>
-                        <input type="file" name="foto_kanan" accept="image/*" required>
+                        <input type="file" name="foto_kanan" required>
                     </div>
                 </div>
             </div>
