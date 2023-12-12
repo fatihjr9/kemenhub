@@ -10,7 +10,7 @@ class DataPengujianController extends Controller
 {
     public function index()
     {
-        $dataUji = dataPengujian::latest()->paginate(10);
+        $dataUji = dataPengujian::latest()->get();
         return view('pages.dashboard', compact('dataUji'));
     }
 
@@ -84,7 +84,7 @@ class DataPengujianController extends Controller
         //upload image
         $image = $request->file('foto_depan', 'foto_belakang', 'foto_kanan', 'foto_kiri');
         $image_name = time() . '.' . $image->extension();
-        $image->storeAs('app/public/img', $image_name);
+        $image->storeAs('storage/', $image_name);
 
         // create post
         dataPengujian::create([

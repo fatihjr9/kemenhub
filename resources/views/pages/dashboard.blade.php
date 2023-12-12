@@ -94,19 +94,19 @@
                                             <div class="p-4 grid grid-cols-1 md:grid-cols-2 gap-4">
                                                 <div class="flex flex-col">
                                                     <h5 class="text-md font-semibold text-black">Foto Depan</h5>
-                                                    <img src="{{ asset('storage'.$item->foto_depan) }}" class="w-96">
+                                                    <img src="{{ asset('storage/'.$item->foto_depan) }}" class="w-96">
                                                 </div>
                                                 <div class="flex flex-col">
                                                     <h5 class="text-md font-semibold text-black">Foto Belakang</h5>
-                                                    <img src="{{ asset('storage'.$item->foto_belakang) }}" class="w-96">
+                                                    <img src="{{ asset('storage/'.$item->foto_belakang) }}" class="w-96">
                                                 </div>
                                                 <div class="flex flex-col">
                                                     <h5 class="text-md font-semibold text-black">Foto Kiri</h5>
-                                                    <img src="{{ asset('storage'.$item->foto_kiri) }}" class="w-96">
+                                                    <img src="{{ asset('storage/'.$item->foto_kiri) }}" class="w-96">
                                                 </div>
                                                 <div class="flex flex-col">
                                                     <h5 class="text-md font-semibold text-black">Foto Kanan</h5>
-                                                    <img src="{{ asset('storage'.$item->foto_kanan) }}" class="w-96">
+                                                    <img src="{{ asset('storage/'.$item->foto_kanan) }}" class="w-96">
                                                 </div>
                                             </div>
                                             </div>

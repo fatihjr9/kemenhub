@@ -12,18 +12,12 @@
     <style>
         body {
             overflow-x: hidden;
-            background-color: #060046;
-        }
-        .breaker {
-            page-break-after: always;
         }
         .bg-template {
             background-image: url("https:blogger.googleusercontent.com/img/a/AVvXsEiAtNncceZ59S_n0HKJaxD1XB6Ky65Rm_e8X2AlgVmKrXAU2vm_mHCN0xgYE8MNywsX-R-UTmuD6d6HofNtTGYOuLVnEahsforZFxJ0iQxQPpBbCvOHOAB716082P9AraE518ZGJSV2joUg0LOKqrj9y5n8-V7pu_-KeDNyhxupfn76ikKIj3PTBGiP=s1600");
-            background-position: initial;
+            background-position: center;
             object-fit: cover;
             background-repeat: no-repeat;
-            height: 30rem;
-            width: 100%;
         }
         .bg-light {
             background-color: #edf2ff;
@@ -31,8 +25,8 @@
         }
     </style>
     <div class="bg-template"></div>
-    <div class="absolute inset-0" style="transform: translateY(10rem)!important;">
-        <div class="bg-light px-4 py-8 mx-auto breaker">
+    <div>
+        <div class="bg-light px-4 py-8 mx-auto">
             <div class="p-4" style="background-color:#f4f5fa;">
                 <div style="width: 24rem; margin-right:auto;">
                     <div class="text-center space-y-2 mb-10">
@@ -85,7 +79,6 @@
                             </div>
                         </div>
                     </div>
-                    <div style="page-break-after: always;"></div>
                     {{-- content-3 --}}
                     <div style="margin-bottom: 1rem;">
                         <div style="display:flex; flex-direction:column; background-color:white; height:fit-content; margin-bottom:1rem;">
@@ -100,7 +93,6 @@
                                 <img src="{{ Storage::url('public/img/').$dataUji->foto_belakang }}" style="width:100%;">
                             </div>
                         </div>
-                        <div style="page-break-after: always;"></div>
                         <div style="display:flex; flex-direction:column; background-color:white; height:fit-content; margin-bottom:1rem;">
                             <h5 style="margin-bottom: 1rem; font-weight:500; margin:1rem 0; text-align:center;">FOTO KANAN</h5>
                             <div style="padding:1rem;">
@@ -114,7 +106,6 @@
                             </div>
                         </div>
                     </div>
-                    <div style="page-break-after: always;"></div>
                     {{-- content-4 --}}
                     <div style="margin-bottom: 1rem;">
                         <h5 style="margin-bottom: 1rem; font-weight:500;">SPESIFIKASI TEKNIS KENDARAAN BERMOTOR</h5>
@@ -155,7 +146,6 @@
                                 <h5>Berat Kosong <br> Kendaraan</h5>
                                 <p>: {{ $dataUji->no_motor_penggerak }}</p>
                             </div>
-                            <div style="page-break-after: always;"></div>
                             {{-- spacer --}}
                             <div style="padding:1rem; display: flex; align-items:flex-start; justify-content:space-between; gap:4rem; border-bottom:1.5px solid #f8f8f8;">
                                 <h5>Dimensi utama <br> kendaraan <br> bermotor</h5>
@@ -186,7 +176,6 @@
                                     <p>: {{ $dataUji->tinggi_kendaraan }}</p>
                                 </div>
                             </div>
-                            <div style="page-break-after: always;"></div>
                             {{-- spacer --}}
                             <div style="padding:1rem; display: flex; align-items:flex-start; justify-content:space-between; gap:4rem; border-bottom:1.5px solid #f8f8f8;">
                                 <h5>Jarak Sumbu</h5>
@@ -212,7 +201,6 @@
                                     <p>: {{ $dataUji->sumbu_tiga_empat }}</p>
                                 </div>
                             </div>
-                            <div style="page-break-after: always;"></div>
                             {{-- spacer --}}
                             <div style="padding:1rem; display: flex; align-items:flex-start; justify-content:space-between; gap:4rem; border-bottom:1.5px solid #f8f8f8;">
                                 <h5>Dimensi bak <br> muatan / tangki</h5>
@@ -249,7 +237,6 @@
                             </div>
                         </div>
                     </div>
-                    <div style="page-break-after: always;"></div>
                     {{-- content-5 --}}
                     <div style="margin-bottom: 1rem;">
                         <h5 style="margin-bottom: 1rem; font-weight:500;">KETERANGAN HASIL UJI</h5>
@@ -286,7 +273,6 @@
                                 <h5>Lampu Utama <br> Penyimpangan <br> Kanan</h5>
                                 <p>: {{ $dataUji->lampu_simpang_utama_kanan }}</p>
                             </div>
-                            <div style="page-break-after: always;"></div>
                             <div style="padding:1rem; display: flex; align-items:flex-start; justify-content:space-between; gap:4rem; border-bottom:1.5px solid #f8f8f8;">
                                 <h5>Lampu Utama <br> Penyimpangan <br> Kiri</h5>
                                 <p>: {{ $dataUji->lampu_simpang_utama_kiri }}</p>
